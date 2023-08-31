@@ -1,22 +1,5 @@
-class Livro:
-    def __init__(self, titulo, autor, edicao, editora, ibms):
-        self.titulo = titulo
-        self.autor = autor
-        self.edicao = edicao
-        self.editora = editora
-        self.ibms = ibms
-
-class Estante:
-    def __init__(self, liv_loc, liv_emp, titulo, autor, edicao, editora, ibms):
-        self.livro = Livro(titulo, autor, edicao, editora, ibms)
-        self.livros_local = liv_loc
-        self.livros_emprestado = liv_emp
-
-class Node:
-    def __init__(self, liv_loc, liv_emp, titulo, autor, edicao, editora, ibms):
-        self.value = Estante(liv_loc, liv_emp, titulo, autor, edicao, editora, ibms)
-        self.next = None
-        
+from classes.node import Node
+from classes.livro import Livro
 
 class LinkedList:
     def __init__(self):
@@ -96,8 +79,6 @@ class LinkedList:
             new_node = new_node.next
         '''
 
-
-
 my_linked_list = LinkedList()
 my_linked_list.adicionar(3, 2, 'Clube de Regatas Vasco da Gama', 'Vasco da Gama', 1898, 'Leandro', 1000)
 my_linked_list.adicionar(7, 0, 'Livro 2', 'Sla 2', 2000, 'Nome 2', 600)
@@ -113,5 +94,5 @@ my_linked_list.print_list()
 #  Função para comprar livro ✅
 #  Função para remover Nó ✅
 #  Emprestar livro ✅
-#! Não lembro mais qual função era pra implementar, eu simplesmente repeti a de cima quando escrevi 😶‍🌫️ ❌
+#! Não lembro mais qual função era pra implementar 😶‍🌫️ ❌
 '''
